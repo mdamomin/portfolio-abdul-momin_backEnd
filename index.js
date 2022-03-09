@@ -8,9 +8,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const nodemailer = require('nodemailer');
 
-app.post('/', (req, res) => {
-  console.log(req.body);
-
+app.post('/nodemail', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
